@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10D2D04E1F99DF0F00FC5C8D /* MobSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */; };
+		10D2D09B1F99F32200FC5C8D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */; };
+		10D2D09C1F99F32900FC5C8D /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */; };
+		10D2D09D1F99F32B00FC5C8D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +28,9 @@
 /* Begin PBXFileReference section */
 		10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSMS.h; sourceTree = "<group>"; };
 		10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSMS.m; sourceTree = "<group>"; };
-		10D2D04F1F99DF2700FC5C8D /* SMS_SDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SMS_SDK; sourceTree = "<group>"; };
+		10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libRNMobSms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMobSms.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -34,12 +39,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D2D09B1F99F32200FC5C8D /* MOBFoundation.framework in Frameworks */,
+				10D2D09C1F99F32900FC5C8D /* MOBFoundationEx.framework in Frameworks */,
+				10D2D09D1F99F32B00FC5C8D /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10D2D09A1F99F32200FC5C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +68,11 @@
 			children = (
 				10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */,
 				10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */,
-				10D2D04F1F99DF2700FC5C8D /* SMS_SDK */,
+				10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */,
+				10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */,
+				10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				10D2D09A1F99F32200FC5C8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +223,10 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -221,6 +243,10 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
