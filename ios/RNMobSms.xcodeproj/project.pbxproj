@@ -31,6 +31,10 @@
 		10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
+		10D2D09E1F9A06C100FC5C8D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		10D2D09F1F9A06CD00FC5C8D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10D2D0A01F9A06D600FC5C8D /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		10D2D0A11F9A06DF00FC5C8D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		134814201AA4EA6300B7C361 /* libRNMobSms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMobSms.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,6 +55,10 @@
 		10D2D09A1F99F32200FC5C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10D2D0A11F9A06DF00FC5C8D /* JavaScriptCore.framework */,
+				10D2D0A01F9A06D600FC5C8D /* libstdc++.tbd */,
+				10D2D09F1F9A06CD00FC5C8D /* libz.tbd */,
+				10D2D09E1F9A06C100FC5C8D /* libicucore.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RNMobSms/SMS_SDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -246,6 +255,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RNMobSms/SMS_SDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
