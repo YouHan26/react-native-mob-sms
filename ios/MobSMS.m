@@ -8,6 +8,7 @@
 
 #import "MobSMS.h"
 #import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDK+ContactFriends.h>
 #import "React/RCTConvert.h"
 #import "React/RCTBridge.h"
 #import "React/RCTEventDispatcher.h"
@@ -27,7 +28,9 @@
 
 RCT_EXPORT_MODULE();
 
-[SMSSDK enableAppContactFriends:NO];
+RCT_EXPORT_METHOD(init:(NSInteger)method){
+    [SMSSDK enableAppContactFriends:NO];
+}
 
 RCT_EXPORT_METHOD(getVerificationCodeByMethod:(NSInteger)method
                   phoneNumber:(NSString *)phoneNumber
@@ -35,11 +38,10 @@ RCT_EXPORT_METHOD(getVerificationCodeByMethod:(NSInteger)method
                   customIdentifier:(NSString *)customIdentifier
                   //                  result:(RCTResponseErrorBlock)result) {
                   callback:(RCTResponseErrorBlock)callback) {
-  
+
   [SMSSDK getVerificationCodeByMethod:(SMSGetCodeMethod)method
                           phoneNumber:phoneNumber
                                  zone:zone
-                     customIdentifier:customIdentifier
                                result:^(NSError *error) {
                                  if(error){
                                    callback(error);
@@ -56,11 +58,11 @@ RCT_EXPORT_METHOD(commitVerificationCode:(NSString *)code
                   zone:(NSString *)zone
                   //                  result:(SMSCommitCodeResultHandler)result) {
                   callback:(RCTResponseErrorBlock)callback) {
-  
+
   [SMSSDK commitVerificationCode:code
                      phoneNumber:phoneNumber
                             zone:zone
-                          result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+                          result:^(NSError *error) {
                             if(error){
                               callback(error);
                             }else{
