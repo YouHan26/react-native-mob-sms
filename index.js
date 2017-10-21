@@ -5,12 +5,6 @@ import {NativeModules} from 'react-native';
 
 const {MobSMS} = NativeModules;
 
-const registerApp = (appKey, appSecret) => {
-  MobSMS.registerApp(appKey, appSecret);
-};
-
-registerApp();
-
 const isError = (str) => {
   return str.indexOf('null') === -1;
 };

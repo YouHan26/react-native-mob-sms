@@ -7,8 +7,7 @@
 //
 
 #import "MobSMS.h"
-#import "SMS_SDK/SMSSDK.h"
-#import "SMS_SDK/Extend/SMSSDK+AddressBookMethods.h"
+#import <SMS_SDK/SMSSDK.h>
 #import "React/RCTConvert.h"
 #import "React/RCTBridge.h"
 #import "React/RCTEventDispatcher.h"
@@ -28,11 +27,7 @@
 
 RCT_EXPORT_MODULE();
 
-
-RCT_EXPORT_METHOD(registerApp:(NSString*)appKey withSecret:(NSString*)appSecret) {
-  [SMSSDK registerApp:appKey withSecret:appSecret];
-  [SMSSDK enableAppContactFriends:NO];
-}
+[SMSSDK enableAppContactFriends:NO];
 
 RCT_EXPORT_METHOD(getVerificationCodeByMethod:(NSInteger)method
                   phoneNumber:(NSString *)phoneNumber

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107357FC1F9B3937005BFB18 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107357F91F9B3937005BFB18 /* MOBFoundation.framework */; };
+		107357FD1F9B3937005BFB18 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107357FB1F9B3937005BFB18 /* SMS_SDK.framework */; };
 		10D2D04E1F99DF0F00FC5C8D /* MobSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */; };
-		10D2D09B1F99F32200FC5C8D /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */; };
-		10D2D09C1F99F32900FC5C8D /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */; };
-		10D2D09D1F99F32B00FC5C8D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		107357F91F9B3937005BFB18 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		107357FB1F9B3937005BFB18 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSMS.h; sourceTree = "<group>"; };
 		10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSMS.m; sourceTree = "<group>"; };
-		10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
-		10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
-		10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
-		10D2D09E1F9A06C100FC5C8D /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		10D2D09F1F9A06CD00FC5C8D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		10D2D0A01F9A06D600FC5C8D /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		10D2D0A11F9A06DF00FC5C8D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -43,22 +40,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D2D09B1F99F32200FC5C8D /* MOBFoundation.framework in Frameworks */,
-				10D2D09C1F99F32900FC5C8D /* MOBFoundationEx.framework in Frameworks */,
-				10D2D09D1F99F32B00FC5C8D /* SMS_SDK.framework in Frameworks */,
+				107357FC1F9B3937005BFB18 /* MOBFoundation.framework in Frameworks */,
+				107357FD1F9B3937005BFB18 /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107357F71F9B3937005BFB18 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				107357F81F9B3937005BFB18 /* Required */,
+				107357FA1F9B3937005BFB18 /* SMSSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		107357F81F9B3937005BFB18 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				107357F91F9B3937005BFB18 /* MOBFoundation.framework */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		107357FA1F9B3937005BFB18 /* SMSSDK */ = {
+			isa = PBXGroup;
+			children = (
+				107357FB1F9B3937005BFB18 /* SMS_SDK.framework */,
+			);
+			path = SMSSDK;
+			sourceTree = "<group>";
+		};
 		10D2D09A1F99F32200FC5C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				10D2D0A11F9A06DF00FC5C8D /* JavaScriptCore.framework */,
 				10D2D0A01F9A06D600FC5C8D /* libstdc++.tbd */,
 				10D2D09F1F9A06CD00FC5C8D /* libz.tbd */,
-				10D2D09E1F9A06C100FC5C8D /* libicucore.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,11 +94,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				107357F71F9B3937005BFB18 /* SDK */,
 				10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */,
 				10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */,
-				10D2D0971F99F31500FC5C8D /* MOBFoundation.framework */,
-				10D2D0991F99F31500FC5C8D /* MOBFoundationEx.framework */,
-				10D2D0981F99F31500FC5C8D /* SMS_SDK.framework */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				10D2D09A1F99F32200FC5C8D /* Frameworks */,
 			);
@@ -234,7 +252,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RNMobSms/SMS_SDK",
+					"$(PROJECT_DIR)/SDK/Required",
+					"$(PROJECT_DIR)/SDK/SMSSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -255,7 +274,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RNMobSms/SMS_SDK",
+					"$(PROJECT_DIR)/SDK/Required",
+					"$(PROJECT_DIR)/SDK/SMSSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
