@@ -9,6 +9,8 @@ const isError = (str) => {
   return str.indexOf('null') === -1;
 };
 
+MobSMS.init();
+
 const getVerificationCode = (phoneNumber, zone, cb) => {
   MobSMS.getVerificationCodeByMethod(0, phoneNumber, zone, null, (error) => {
     cb(isError(error.code));
