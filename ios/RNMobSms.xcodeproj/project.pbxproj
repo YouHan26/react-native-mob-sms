@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		108274D51F9B5F73000F32D1 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108274D41F9B5F73000F32D1 /* MOBFoundation.framework */; };
-		108274D71F9B5F78000F32D1 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108274D61F9B5F78000F32D1 /* SMS_SDK.framework */; };
+		108275291F9D7DF4000F32D1 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108275261F9D7DF4000F32D1 /* MOBFoundation.framework */; };
+		1082752A1F9D7DF4000F32D1 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108275281F9D7DF4000F32D1 /* SMS_SDK.framework */; };
 		10D2D04E1F99DF0F00FC5C8D /* MobSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		108274D41F9B5F73000F32D1 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
-		108274D61F9B5F78000F32D1 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		108275261F9D7DF4000F32D1 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		108275281F9D7DF4000F32D1 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSMS.h; sourceTree = "<group>"; };
 		10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSMS.m; sourceTree = "<group>"; };
 		10D2D09F1F9A06CD00FC5C8D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -40,14 +40,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				108274D51F9B5F73000F32D1 /* MOBFoundation.framework in Frameworks */,
-				108274D71F9B5F78000F32D1 /* SMS_SDK.framework in Frameworks */,
+				108275291F9D7DF4000F32D1 /* MOBFoundation.framework in Frameworks */,
+				1082752A1F9D7DF4000F32D1 /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		108275241F9D7DF4000F32D1 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				108275251F9D7DF4000F32D1 /* Required */,
+				108275271F9D7DF4000F32D1 /* SMSSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		108275251F9D7DF4000F32D1 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				108275261F9D7DF4000F32D1 /* MOBFoundation.framework */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		108275271F9D7DF4000F32D1 /* SMSSDK */ = {
+			isa = PBXGroup;
+			children = (
+				108275281F9D7DF4000F32D1 /* SMS_SDK.framework */,
+			);
+			path = SMSSDK;
+			sourceTree = "<group>";
+		};
 		10D2D09A1F99F32200FC5C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,8 +94,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				108274D61F9B5F78000F32D1 /* SMS_SDK.framework */,
-				108274D41F9B5F73000F32D1 /* MOBFoundation.framework */,
+				108275241F9D7DF4000F32D1 /* SDK */,
 				10D2D04C1F99DF0E00FC5C8D /* MobSMS.h */,
 				10D2D04D1F99DF0E00FC5C8D /* MobSMS.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -225,7 +249,10 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SDK/**",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../React/**",
@@ -241,7 +268,10 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SDK/**",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../React/**",
